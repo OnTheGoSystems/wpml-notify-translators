@@ -2,31 +2,33 @@
 
 ## Disclaimer
 
-Users may ask for a feature that we won't or can't add to our plugins for several reasons (low demand, or higher priorities).
+Users may ask for a feature that we won't or can't add to our plugins for several reasons (low demand or higher priorities).
 
 Sometimes, we create feature plugins that address one or more of these features.
 
-However, until they are officially merged into our main plugins, OnTheGoSystem is unable to ensure support for such plugins.
+However, OnTheGoSystem cannot ensure support for such plugins unless we decide to merge them into the core plugins.
 
-On the other hand, these plugins are public and everyone is welcome to contribute.
+On the other hand, these plugins are public, and everyone is welcome to contribute.
 
 ## Feature
 
-This plugins, once enabled, will send a notification every time the original version of a translated post is updated.
+This plugin, once enabled, will send a notification every time the original version of a translated post is updated.
 
-The notification is set to all the translators that meet the language pair.
+All the translators that meet the language pair receive the notification.
 
-For instance, if a post in English is translated into French and Dutch, when updating the original post, a notifications will be set to all those translators that can translated from English to Franch and from English to Dutch.
+Example:
+A post in English has translations in French and Dutch.
+When updating the original post, a notification is sent to all English to Franch and English to Dutch translators.
 
 ## Installation
 
-Just copy the whole project in the "plugins" directory of your WordPress site, then activate the plugin from the Plugins page of your website.
+Just copy the whole project in the "plugins" directory of your WordPress site, then activate the plugin from your website's Plugins page.
 
 ## Configuration
 
 In the current iteration, the plugin has no customizable settings.
 
-However, you may leverage the WordPress and WPML API (actions and filters) to modify the behavior.
+However, you may leverage the WordPress and WPML API (actions and filters) to modify the behaviour.
 
 In addition, this plugin provides three filters:
 
@@ -36,7 +38,7 @@ In addition, this plugin provides three filters:
 
 All these filters accept the value mentioned at the end of their name (subject, body, recipient) as a first parameter (the actual value to filter).
 
-In addition, they all receive two optional parameters:
+Also, they all receive two optional parameters:
 
-- `\WP_Post $post`: The post that has been updated. 
+- `\WP_Post $post`: The updated post.
 - `\WP_User $recipient`: The recipient (as an instance of `\WP_User`) of the email.
